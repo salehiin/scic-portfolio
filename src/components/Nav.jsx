@@ -1,6 +1,18 @@
+import { Link } from "react-router-dom";
+import { scroller } from 'react-scroll'; 
+
 const Nav = () => {
+  const scrollToElement = (elementName) => {
+    scroller.scrollTo(elementName, {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 50, // Scrolls to element + 50 pixels down the page
+    });
+  };
+
   return (
-    <div className="navbar bg-[#1e1e1e] shadow-lg px-4 fixed z-10">
+    <div className="navbar bg-[#1e1e1e] text-white shadow-lg px-4 fixed top-0 z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -21,56 +33,28 @@ const Nav = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-[#1e1e1e] rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content gap-2 pl-5 bg-[#1e1e1e] text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <li>
-                <a>Services</a>
-            </li>
-            
-            <li>
-                <a>Works</a>
-            </li>
-            <li>
-                <a>Resume</a>
-            </li>
-            <li>
-                <a>Skills</a>
-            </li>
-            <li>
-                <a>Testimonials</a>
-            </li>
-            <li>
-                <a>Contact</a>
-            </li>
+            <Link onClick={() => scrollToElement('services')}><a href="#services">Services</a></Link>
+            <Link onClick={() => scrollToElement('works')}><a href="#works">Works</a></Link>
+            <Link onClick={() => scrollToElement('resume')}><a href="#resume">Resume</a></Link>
+            <Link onClick={() => scrollToElement('skill')}><a href="#skill">Skills</a></Link>
+            <Link onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></Link>
           </ul>
         </div>
-        <a className="btn btn-ghost gap-0 text-xl">S<span className="text-primary">salehin</span></a>
+        <a className="btn btn-ghost gap-0 text-xl">S<span className="text-[#52b788]">salehin</span></a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Services</a>
-          </li>
-          
-          <li>
-            <a>Works</a>
-          </li>
-          <li>
-            <a>Resume</a>
-          </li>
-          <li>
-            <a>Skills</a>
-          </li>
-          <li>
-            <a>Testimonials</a>
-          </li>
-          <li>
-            <a>Contact</a>
-          </li>
+        <ul className="menu menu-horizontal px-1 gap-10 font-bold">
+          <Link onClick={() => scrollToElement('services')}><a href="#services">Services</a></Link>
+          <Link onClick={() => scrollToElement('works')}><a href="#works">Works</a></Link>
+          <Link onClick={() => scrollToElement('resume')}><a href="#resume">Resume</a></Link>
+          <Link onClick={() => scrollToElement('skill')}><a href="#skill">Skills</a></Link>
+          <Link onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></Link>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Hire me!</a>
+        <a className="btn text-black hover:text-white hover:bg-[#00BFFF] bg-[#52b788] border-none">Hire me!</a>
       </div>
     </div>
   );

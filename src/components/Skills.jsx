@@ -2,7 +2,7 @@
 
 const Skills = () => {
     return (
-        <div>
+        <div className="min-h-72" id="skill">
             <h1>Skills</h1>
         </div>
     );

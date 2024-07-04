@@ -1,11 +1,11 @@
-
+import { Element } from 'react-scroll';
 
 const Resume = () => {
-    return (
-        <div>
-            <h1>Resume</h1>
-        </div>
-    );
+  return (
+    <Element name="resume" className="min-h-72" id="resume">
+      <h1>Resume</h1>
+    </Element>
+  );
 };
 
 export default Resume;
