@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { scroller } from 'react-scroll'; 
+import { Link, NavLink } from "react-router-dom";
+import { scroller, animateScroll as scroll } from 'react-scroll'; 
 
 const Nav = () => {
   const scrollToElement = (elementName) => {
@@ -8,6 +8,14 @@ const Nav = () => {
       delay: 100,
       smooth: true,
       offset: 50, // Scrolls to element + 50 pixels down the page
+    });
+  };
+
+  const scrollToTop = () => {
+    scroll.scrollToTop({
+      duration: 1500,
+      delay: 100,
+      smooth: true,
     });
   };
 
@@ -42,19 +50,23 @@ const Nav = () => {
             <Link onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></Link>
           </ul>
         </div>
-        <a className="btn btn-ghost gap-0 text-xl">S<span className="text-[#52b788]">salehin</span></a>
+        <Link to='/' onClick={scrollToTop} className="btn btn-ghost gap-0 text-xl">
+          S<span className="text-[#52b788]">salehin</span>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-10 font-bold">
           <Link onClick={() => scrollToElement('services')}><a href="#services">Services</a></Link>
-          <Link onClick={() => scrollToElement('works')}><a href="#works">Works</a></Link>
-          <Link onClick={() => scrollToElement('resume')}><a href="#resume">Resume</a></Link>
+          <NavLink className={({isActive}) => isActive ? 'text-[#52b788]' : 'text-white'} onClick={() => scrollToElement('works')}><a href="#works">Works</a></NavLink>
+          <NavLink className={({isActive}) => isActive ? 'text-[#52b788]' : 'text-white'} onClick={() => scrollToElement('resume')}>
+            <a href="#resume">Resume</a>
+          </NavLink>
           <Link onClick={() => scrollToElement('skill')}><a href="#skill">Skills</a></Link>
           <Link onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></Link>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn text-black hover:text-white hover:bg-[#00BFFF] bg-[#52b788] border-none">Hire me!</a>
+        <Link to="/hire" className="btn text-black hover:text-white hover:bg-[#00BFFF] bg-[#52b788] border-none">Hire me!</Link>
       </div>
     </div>
   );
