@@ -61,7 +61,7 @@ const Nav = () => {
           <NavLink className={({isActive}) => isActive ? 'text-[#52b788]' : 'text-white'} onClick={() => scrollToElement('resume')}>
             <a href="#resume">Resume</a>
           </NavLink>
-          <Link onClick={() => scrollToElement('skill')}><a href="#skill">Skills</a></Link>
+          <Link className="active:bg-violet-700" onClick={() => scrollToElement('skill')}><a href="#skill">Skills</a></Link>
           <Link onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></Link>
         </ul>
       </div>

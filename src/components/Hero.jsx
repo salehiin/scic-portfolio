@@ -7,13 +7,13 @@ const Hero = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.postimg.cc/fygPq2F8/ppic.png"
-            className="max-w-sm rounded-lg shadow-2xl brightness-50"
+            className="max-w-sm rounded-lg shadow-2xl brightness-50 border-2 border-[#52b788] rotate-6 hover:border-cyan-500/100 hover:rotate-0 ease-in-out duration-300 delay-300"
           />
           <div className="pr-[150px] text-xl">
             <h3 className="text-3xl font-semibold leading-10">I am Shoeb Salehin</h3>
             <h1 className="text-6xl font-bold">Web Developer+ <br></br> UX Designer</h1>
             <p className="py-6">
-            I break down complex user experinece problems to create integritiy focussed solutions that connect billions of people
+            I break down complex user experience problems to create integritiy focussed solutions that connect billions of people
             </p>
             <div className="flex items-center gap-4">
                 <button className="btn btn-outline btn-wide btn-success">
