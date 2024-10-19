@@ -1,4 +1,6 @@
 import { useState } from "react";
+import emailjs from 'emailjs-com';
+import './Contact.css'
 
 
 const Contact = () => {
@@ -18,9 +20,9 @@ const Contact = () => {
         e.preventDefault();
 
         // Replace with your EmailJS service ID, template ID, and user ID
-        const serviceID = 'YOUR_SERVICE_ID';
-        const templateID = 'YOUR_TEMPLATE_ID';
-        const userID = 'YOUR_USER_ID';
+        const serviceID = 'service_8exnqcr';
+        const templateID = 'template_youabb7';
+        const userID = '7Cv9FEoA_40T9vznE';
 
         emailjs.send(serviceID, templateID, formData, userID)
             .then((response) => {
@@ -48,7 +50,7 @@ const Contact = () => {
                     <div className="flex justify-center">
                         <label className="w-1/3" htmlFor="name">Name:</label>
                         <input
-                            className="bg-white w-2/3 h-9"
+                            className="bg-white w-2/3 h-9 text-gray-800"
                             type="text"
                             name="name"
                             value={formData.name}
@@ -59,7 +61,7 @@ const Contact = () => {
                     <div className="flex justify-center">
                         <label className="w-1/3" htmlFor="email">Email:</label>
                         <input
-                            className="bg-white w-2/3 h-9"
+                            className="bg-white w-2/3 h-9 text-gray-800"
                             type="email"
                             name="email"
                             value={formData.email}
@@ -70,7 +72,7 @@ const Contact = () => {
                     <div className="flex justify-center">
                         <label className="w-1/3" htmlFor="message">Message:</label>
                         <textarea
-                            className="bg-white w-2/3 h-32"
+                            className="bg-white w-2/3 h-32 text-gray-800"
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
