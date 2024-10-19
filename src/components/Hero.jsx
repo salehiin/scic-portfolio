@@ -10,10 +10,11 @@ const Hero = () => {
             className="max-w-sm rounded-lg shadow-2xl brightness-50 border-2 border-[#52b788] rotate-6 hover:border-cyan-500/100 hover:rotate-0 ease-in-out duration-300 delay-300"
           />
           <div className="pr-[150px] text-xl">
-            <h3 className="text-3xl font-semibold leading-10">I am Shoeb Salehin</h3>
+            <h3 className="text-3xl font-semibold leading-10">✋ Hello! I’m Shoeb Salehin Khan</h3>
             <h1 className="text-6xl font-bold">Web Developer+ <br></br> UX Designer</h1>
             <p className="py-6">
-            I break down complex user experience problems to create integritiy focussed solutions that connect billions of people
+            
+Full stack MERN developer passionate about creating dynamic and engaging web applications. With a keen interest in both front-end and back-end development, I leverage the power of MongoDB, Express.js, React.js, and Node.js to build seamless user experiences. As I continue to grow and refine my skills, I’m excited to take on new challenges and bring innovative ideas to life through code. Let’s connect and explore the possibilities together!
             </p>
             <div className="flex items-center gap-4">
                 <button className="btn btn-outline btn-wide btn-success">
