@@ -1,4 +1,4 @@
-
+import CV from '../assets/cv.pdf';
 
 const Hero = () => {
   return (
@@ -17,9 +17,16 @@ const Hero = () => {
 Full stack MERN developer passionate about creating dynamic and engaging web applications. With a keen interest in both front-end and back-end development, I leverage the power of MongoDB, Express.js, React.js, and Node.js to build seamless user experiences. As I continue to grow and refine my skills, I’m excited to take on new challenges and bring innovative ideas to life through code. Let’s connect and explore the possibilities together!
             </p>
             <div className="flex items-center gap-4">
-                <button className="btn btn-outline btn-wide btn-success">
-                Button
-                <svg
+                <a className="btn btn-outline btn-wide btn-success"
+                  href={CV}
+                  // href='/cv.pdf'
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  // download="Shoeb_Salehin_Khan_CV.pdf"
+                  
+                >
+                Download CV
+                {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
                     fill="none"
@@ -30,12 +37,12 @@ Full stack MERN developer passionate about creating dynamic and engaging web app
                     strokeLinejoin="round"
                     strokeWidth="2"
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-                </button>
+                </svg> */}
+                </a>
                 <ul className="flex gap-4">
                     <li><a href="">fb</a></li>
                     <li><a href="">in</a></li>
-                    <li><a href="">gh</a></li>
+                    <li><a href="https://github.com/salehiin" target="_blank">gh</a></li>
                     <li><a href="">tw</a></li>
                 </ul>
             </div>
