@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { scroller, animateScroll as scroll } from 'react-scroll'; 
+import { scroller, animateScroll as scroll } from 'react-scroll';
 
 const Nav = () => {
   const scrollToElement = (elementName) => {
@@ -43,10 +43,10 @@ const Nav = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content gap-2 pl-5 bg-[#1e1e1e] text-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
-            <Link onClick={() => scrollToElement('services')}><a href="#services">Skills</a></Link>
+            <Link onClick={() => scrollToElement('skills')}><a href="#services">Skills</a></Link>
             <Link onClick={() => scrollToElement('works')}><a href="#works">Works</a></Link>
-            <Link onClick={() => scrollToElement('resume')}><a href="#resume">Resume</a></Link>
-            <Link onClick={() => scrollToElement('skill')}><a href="#skill">Skills</a></Link>
+            {/* <Link onClick={() => scrollToElement('resume')}><a href="#resume">Resume</a></Link> */}
+            {/* <Link onClick={() => scrollToElement('skill')}><a href="#skill">Skills</a></Link> */}
             <Link onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></Link>
           </ul>
         </div>
@@ -56,13 +56,46 @@ const Nav = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-10 font-bold">
-          <Link onClick={() => scrollToElement('services')}><a href="#services">Skills</a></Link>
-          <NavLink className={({isActive}) => isActive ? 'text-[#52b788]' : 'text-white'} onClick={() => scrollToElement('works')}><a href="#works">Works</a></NavLink>
+          {/* <Link onClick={() => scrollToElement('services')}><a href="#services">Skills</a></Link> */}
+
+          {/*  */}
+
+          <NavLink
+            to="#services"
+            className={({ isActive }) => isActive ? 'text-[#52b788]' : 'text-white'}
+            onClick={() => scrollToElement('skills')}
+          >
+            Skills
+          </NavLink>
+
+          <NavLink
+            to="#works"
+            className={({ isActive }) => isActive ? 'text-[#52b788]' : 'text-white'}
+            onClick={() => scrollToElement('works')}
+          >
+            Projects
+          </NavLink>
+
+          <NavLink
+            to="#contact"
+            className={({ isActive }) => isActive ? 'text-[#52b788]' : 'text-white'}
+            onClick={() => scrollToElement('contact')}
+          >
+            Contact
+          </NavLink>
+
+
+          {/*  */}
+
+
+          {/* <NavLink className={({ isActive }) => isActive ? 'text-[#52b788]' : 'text-white'} onClick={() => scrollToElement('services')}><a href="#sevices">Skills</a></NavLink>
+          <NavLink className={({ isActive }) => isActive ? 'text-[#52b788]' : 'text-white'} onClick={() => scrollToElement('works')}><a href="#works">Works</a></NavLink>
+          <NavLink className={({ isActive }) => isActive ? 'text-[#52b788]' : 'text-white'} onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></NavLink> */}
           {/* <NavLink className={({isActive}) => isActive ? 'text-[#52b788]' : 'text-white'} onClick={() => scrollToElement('resume')}>
             <a href="#resume">Resume</a>
           </NavLink> */}
           {/* <Link className="active:bg-violet-700" onClick={() => scrollToElement('skills')}><a href="#skills">Skills</a></Link> */}
-          <Link onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></Link>
+          {/* <Link onClick={() => scrollToElement('contact')}><a href="#contact">Contact</a></Link> */}
         </ul>
       </div>
       <div className="navbar-end">

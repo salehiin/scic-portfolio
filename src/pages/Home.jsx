@@ -9,7 +9,7 @@ import Works from "../components/Works";
 
 const Home = () => {
     return (
-        <div className="text-white bg-[#1e1e1e] px-4    ">
+        <div className="text-white bg-[#1e1e1e] md:px-4    ">
             
             <Hero></Hero>
             <Services></Services>
