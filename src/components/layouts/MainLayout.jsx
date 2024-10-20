@@ -11,7 +11,7 @@ import Works from "../Works";
 
 const MainLayout = () => {
     return (
-        <div className="bg-[#1e1e1e] text-white border">
+        <div className="bg-[#1e1e1e] text-white">
             <div className="">
                 <Nav></Nav>
             </div>
